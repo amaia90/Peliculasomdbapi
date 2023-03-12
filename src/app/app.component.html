@@ -1,0 +1,25 @@
+<ul *ngIf="peliculas">
+  <li *ngFor="let item of peliculas">
+    <p class="name">{{ item.Title }}</p>
+    <p class="name">{{ item.Year}}</p>
+    <p class="name">{{ item.Poster }}</p>
+    <p class="name">{{ item.imdbID
+    }}</p>
+
+
+    <select [(ngModel)]="opcionSeleccionado" (change)="capturar()">
+      <option value="">Selecciona una nota</option>
+      <option value="1">1 Mal</option>
+      <option value="2">2 Regular</option>
+      <option value="3">3 Bien</option>
+      <option value="4">4 Muy Bien</option>
+      <option value="5">5 Sobresaliente</option>
+
+    </select>
+    <p>Haz seleccionado la opción  {{ verSeleccionado }}</p>
+
+  </li>
+</ul>
+
+
+
